@@ -1,7 +1,7 @@
 # VIM Plugin
 ## Plugin-Manager
 ### vim-plug
-* Install
+- Install
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
@@ -86,5 +86,10 @@ let g:lightline = {
     hi Comment ctermfg=102
     hi Visual  ctermbg=236
     ```
-    - Molokai の背景を黒にする
+    - Molokai の背景を黒にする    
     https://lowply.github.io/blog/2012/08/patch-to-disable-molokai-bgcolor/
+- Tereterm の フォントを Rictyに変更
+    - Ricty Diminished を入手して windowsにいれる
+        - RictyDiminished-Regular.ttf
+    - Tereterm のフォント設定を変更
+        - 文字の大きさは 13がおすすめ

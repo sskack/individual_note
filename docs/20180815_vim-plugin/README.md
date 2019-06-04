@@ -6,6 +6,22 @@
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 ```
+    - Proxyが必要な場合
+    ```
+    export http_proxy=xxx
+    export https_proxy=xxx
+    ```
+    - Proxyのクレデンシャルが必要かつ記号が入ってる場合
+    ```
+    export http_proxy=id:password@xxx:8080
+    export https_proxy=id:password@xxx:8080
+    # p@ssword なら p%40ssword で URLエンコーディングを指定する
+    ```
+
+- vim-plug 使い方
+    - 上記curlでvimplug入手
+    - vim 起動
+    - `:PlugInstall`
 * .vimrc
 ```
 if has('vim_starting')
@@ -62,6 +78,13 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ }
 ```
-* vim-plug 使い方
-1. vim 起動
-2. `:PlugInstall`
+- Molokai設定
+    - Molokai普通に導入
+    - Molokai
+    ```
+    # vimrcの以下記述でコメントアウトがいい感じに表示される
+    hi Comment ctermfg=102
+    hi Visual  ctermbg=236
+    ```
+    - Molokai の背景を黒にする
+    https://lowply.github.io/blog/2012/08/patch-to-disable-molokai-bgcolor/
